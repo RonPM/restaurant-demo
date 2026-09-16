@@ -627,3 +627,404 @@ body {
   color: #9aaba0;
   margin-bottom: 8px;
 }
+
+/* ─── Guests & split bill ─────────────────────────────── */
+.cart-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.manage-guests-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1.5px solid #d8d4cf;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a271f;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.manage-guests-btn:hover {
+  border-color: #00c1b2;
+  color: #00c1b2;
+}
+
+.guest-count-badge {
+  background: #00c1b2;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.guest-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.guest-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #1a271f;
+}
+
+.guest-row--host {
+  color: #6b7c71;
+  font-weight: 600;
+}
+
+.guest-name {
+  font-weight: 600;
+}
+
+.guest-add-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.guest-add-row .card-input {
+  flex: 1;
+}
+
+.guest-max-hint {
+  font-size: 0.75rem;
+  color: #9aaba0;
+  margin-bottom: 12px;
+}
+
+/* Item assignment (inline in cart rows) */
+.assign {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  background: #f8f4ef;
+  border-radius: 6px;
+}
+
+.assign-mode-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.assign-mode-btn {
+  padding: 4px 10px;
+  border: 1px solid #d8d4cf;
+  border-radius: 999px;
+  background: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #6b7c71;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.assign-mode-btn.active {
+  background: #1a271f;
+  color: white;
+  border-color: #1a271f;
+}
+
+.assign-chip-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.assign-chip {
+  padding: 4px 10px;
+  border: 1px solid #d8d4cf;
+  border-radius: 999px;
+  background: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1a271f;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.assign-chip.active {
+  background: #00c1b2;
+  color: white;
+  border-color: #00c1b2;
+}
+
+.assign-checkbox-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.assign-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #1a271f;
+  font-weight: 600;
+}
+
+.assign-units {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.assign-unit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.assign-unit-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1a271f;
+}
+
+.assign-unit-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assign-unit-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #d8d4cf;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  color: #1a271f;
+}
+
+.assign-unit-btn:disabled {
+  color: #d8d4cf;
+  cursor: not-allowed;
+}
+
+.assign-unit-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 12px;
+  text-align: center;
+}
+
+.assign-unit-remaining {
+  font-size: 0.7rem;
+  color: #9aaba0;
+}
+
+.assign-unit-remaining--pending {
+  color: #cc8b00;
+}
+
+/* Payment modal split section */
+.modal-split {
+  border-top: 1px solid #ede9e4;
+  padding-top: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-split-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1a271f;
+  margin-bottom: 12px;
+}
+
+.modal-split-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.modal-split-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.modal-split-name {
+  font-weight: 700;
+  color: #1a271f;
+  flex-shrink: 0;
+}
+
+.modal-split-sub {
+  color: #9aaba0;
+  flex: 1;
+  text-align: right;
+  font-size: 0.7rem;
+}
+
+.modal-split-total {
+  font-weight: 800;
+  color: #1a271f;
+  flex-shrink: 0;
+  min-width: 60px;
+  text-align: right;
+}
+
+.modal-split--receipt {
+  text-align: left;
+  width: 100%;
+}
+
+.modal-split-row--receipt {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ede9e4;
+}
+
+.modal-split-row--receipt:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-split-row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.modal-split-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-left: 4px;
+}
+
+.modal-split-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #6b7c71;
+}
+
+/* Order history */
+.history-nav-link {
+  background: none;
+  border: none;
+  color: #1a271f;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.history-nav-link:hover {
+  color: #00c1b2;
+}
+
+.history-view {
+  flex: 1;
+  padding: 32px 40px;
+  max-width: 720px;
+}
+
+.history-view h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  color: #1a271f;
+}
+
+.history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-row {
+  background: white;
+  border: 1px solid #ede9e4;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.history-row-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.history-row-id {
+  font-weight: 800;
+  color: #1a271f;
+}
+
+.history-row-date {
+  color: #9aaba0;
+  font-size: 0.8rem;
+  flex: 1;
+  text-align: left;
+}
+
+.history-row-total {
+  font-weight: 800;
+  color: #1a271f;
+}
+
+.history-row-expanded {
+  padding: 0 16px 16px;
+  border-top: 1px solid #ede9e4;
+}
+
+.history-breakdown-row {
+  padding-top: 10px;
+}
+
+.history-no-split {
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: #9aaba0;
+}
